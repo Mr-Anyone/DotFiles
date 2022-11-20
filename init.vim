@@ -71,6 +71,9 @@ nnoremap <leader>cg <cmd>CMakeGenerate<cr>
 lua <<EOF
 	require("toggleterm").setup{
 		open_mapping = [[<c-\>]],
+		size = 100,
 		direction="vertical"
 	}
 EOF
+" exit terminal with esc
+:tnoremap <Esc> <C-\><C-n>
