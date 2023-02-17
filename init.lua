@@ -1,0 +1,6 @@
+require('options')
+require('mapping')
+require('plugins')
+require('plugins/bufferline')
+require('plugins/toggleterm')
+require('colorscheme')
