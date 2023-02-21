@@ -20,6 +20,8 @@ map("t", "<c-[>", [[<C-\><C-n>]])
 -- nerdtree keybinds 
 map("n", "<leader>nn",  "<cmd>NERDTreeFocus<cr>")
 map("n", "<leader>nf",  "<cmd>NERDTreeToggle<cr>")
+-- running run.sh file 
+map("n", "<f4>", "<cmd>!./run.sh<cr>")
 -- telescope 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})

@@ -1,6 +1,7 @@
 require('options')
 require('mapping')
 require('plugins')
+require('colorscheme')
 require('plugins/bufferline')
 require('plugins/toggleterm')
-require('colorscheme')
+require('plugins/coc')

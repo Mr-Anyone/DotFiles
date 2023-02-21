@@ -27,8 +27,8 @@ return require('packer').startup(function(use)
 	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 	-- install theme 
 	use 'folke/tokyonight.nvim'
-
-	-- Automatically set up your configuration after cloning packer.nvim
+	-- lsp (coc)
+	use {'neoclide/coc.nvim', branch= 'release'}
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
 		require('packer').sync()
