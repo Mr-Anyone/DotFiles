@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
 	-- bufferline plugin daeling displaying buffers in tab
 	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 	-- install theme 
-	use 'folke/tokyonight.nvim'
+	use {'ellisonleao/gruvbox.nvim'}
 	-- lsp (coc)
 	use {'neoclide/coc.nvim', branch= 'release'}
 	-- Put this at the end after all plugins
