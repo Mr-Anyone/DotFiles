@@ -1,2 +1,6 @@
-# Hello 
-This is my dot files. It containes only one things. My vim configuration file! Yay!
+## Neovim setup
+[] debugger
+[] git
+[] better pair autocomplete 
+[] neovim native lsp
+[] better macros
