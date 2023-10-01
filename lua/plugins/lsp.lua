@@ -1,6 +1,7 @@
 local lspconfig = require('lspconfig')
 -- language servers setup
 lspconfig.ccls.setup {}
+lspconfig.pyright.setup{}
 
 
 vim.api.nvim_create_autocmd('LspAttach', {
