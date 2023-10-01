@@ -13,6 +13,3 @@ vim.opt.scrolloff = 8
 -- disble auto formating
 vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 
-
--- seraching
-vim.opt.ignorecase=true 

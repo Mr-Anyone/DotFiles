@@ -21,11 +21,6 @@ map("n", "<leader>nn",  "<cmd>NERDTreeFocus<cr>")
 map("n", "<leader>nf",  "<cmd>NERDTreeToggle<cr>")
 -- running run.sh file 
 map("n", "<f4>", "<cmd>10TermExec cmd=./run.sh<cr>")
--- telescope 
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 -- moving between buffers
 map('n', "<leader>bb", "<cmd>bprevious<cr>")
 map('n', "<leader>bf", "<cmd>bnext<cr>")
