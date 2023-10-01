@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
 	use {"akinsho/toggleterm.nvim", tag = '*'}
 	-- install teloscope
 	use {'nvim-telescope/telescope.nvim', branch='0.1.x', requires={{'nvim-lua/plenary.nvim'}}}  
+
 	use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
@@ -32,6 +33,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
+    -- snippet
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/vim-vsnip-integ'
 

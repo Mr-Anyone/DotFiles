@@ -3,6 +3,12 @@ local builtin = require('telescope.builtin')
 local actions = require "telescope.actions"
 require('telescope').setup{
   defaults = {
+    -- having a previewer
+    layout_config = {
+      horizontal = {
+        preview_cutoff = 0,
+      },
+    },
     -- Default configuration for telescope goes here:
     -- config_key = value,
     mappings = {
@@ -21,13 +27,6 @@ require('telescope').setup{
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
   },
-  extensions = {
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
-  }
 }
 
 

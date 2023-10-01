@@ -22,7 +22,7 @@ cmp.setup({
       { name = 'vsnip' }, -- For vsnip users.
     }, {
       { name = 'buffer' },
-    })
+    }),
 })
 
 -- -- Set configuration for specific filetype.
