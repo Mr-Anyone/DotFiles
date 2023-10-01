@@ -1,6 +1,6 @@
 ## Neovim setup
-[] debugger
-[] git
-[] better pair autocomplete 
-[] neovim native lsp
-[] better macros
+1. To repalce text, press control r
+
+## i3 Setup
+
+To horizontally split screen press mod + u

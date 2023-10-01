@@ -1,16 +1,18 @@
 vim.opt.number=true
 vim.opt.relativenumber=true 
 vim.opt.autoindent=true 
+-- better tab
 vim.opt.smarttab=true
+vim.opt.tabstop=4
+vim.opt.shiftwidth=4
+vim.opt.softtabstop=4
+vim.opt.expandtab=true
 
--- for coc
--- Some servers have issues with backup files, see #649
-vim.opt.backup = false
-vim.opt.writebackup = false
+-- have space to show serach bar
+vim.opt.scrolloff = 8
+-- disble auto formating
+vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 
--- Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
--- delays and poor user experience
-vim.opt.updatetime = 300
 
--- Always show the signcolumn, otherwise it would shift the text each time
--- diagnostics appeared/became resolved
+-- seraching
+vim.opt.ignorecase=true 
