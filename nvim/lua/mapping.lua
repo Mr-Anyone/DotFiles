@@ -16,9 +16,6 @@ map("i", "<c-b>", "<esc>bi")
 map("i", "<c-o>", "<esc>o")
 -- for toggle terminal keymapings
 map("t", "<esc>", [[<C-\><C-n>]])
--- nerdtree keybinds 
-map("n", "<leader>nn",  "<cmd>NERDTreeFocus<cr>")
-map("n", "<leader>nf",  "<cmd>NERDTreeToggle<cr>")
 -- running run.sh file 
 map("n", "<f4>", "<cmd>10TermExec cmd=./run.sh<cr>")
 -- moving between buffers
