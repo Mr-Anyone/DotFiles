@@ -1,7 +1,17 @@
 local lspconfig = require('lspconfig')
+local util = require('lspconfig.util')
+local root_files = {
+  'pyrightconfig.json',
+}
+
+
 -- language servers setup
 lspconfig.ccls.setup {}
-lspconfig.pyright.setup{}
+lspconfig.pyright.setup{
+    root_dir = function(fname)
+      return util.root_pattern(unpack(root_files))(fname)
+    end,
+}
 
 
 vim.api.nvim_create_autocmd('LspAttach', {
