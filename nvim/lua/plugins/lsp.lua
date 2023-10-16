@@ -11,6 +11,10 @@ lspconfig.pyright.setup{
     root_dir = function(fname)
       return util.root_pattern(unpack(root_files))(fname)
     end,
+
+    settings = {
+        analysis = {diagnosticMode = "off", typeCheckingMode = "off" }
+    }
 }
 
 
