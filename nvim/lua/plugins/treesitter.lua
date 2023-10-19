@@ -40,3 +40,8 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
+-- setup folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- automatically opens fold when openning a file
+vim.opt.foldenable = false
