@@ -6,8 +6,13 @@ local root_files = {
 
 
 -- language servers setup
-lspconfig.ccls.setup {}
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+lspconfig.ccls.setup {
+    capabilities=capabilities
+}
+
 lspconfig.pyright.setup{
+    capabilities=capabilities,
     root_dir = function(fname)
       return util.root_pattern(unpack(root_files))(fname)
     end,
