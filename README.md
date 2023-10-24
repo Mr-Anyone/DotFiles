@@ -1,7 +1,8 @@
 ## Neovim setup
 1. To repalce text, press control r
-4. faster inline editing
-5. faster way to move between files.
+2. faster inline editing
+3. faster way to move between files.
+4. how to go to next argument in neovim coc?
 
 ## i3 Setup
 

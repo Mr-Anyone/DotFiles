@@ -35,4 +35,5 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fh', builtin.lsp_references, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fe', builtin.diagnostics, {})
+vim.keymap.set('n', '<leader>fm', builtin.marks, {})
 

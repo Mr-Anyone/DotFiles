@@ -19,3 +19,5 @@ map('n', "<leader>bb", "<cmd>bprevious<cr>")
 map('n', "<leader>bf", "<cmd>bnext<cr>")
 -- setup replace
 map('n', '<c-r>', ':%s/')
+-- setup marks hotkey
+map('n', "'", '`')
