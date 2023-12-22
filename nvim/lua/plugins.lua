@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-nvim-lsp'
+    use 'windwp/nvim-autopairs'
      
     -- friendly-snippets
     use 'hrsh7th/vim-vsnip'
@@ -41,8 +42,9 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp-signature-help'
     use "rafamadriz/friendly-snippets"
 
-	-- Put this at the end after all plugins
-    use 'ThePrimeagen/harpoon'
+    -- nvim-dap debugger 
+    use 'mfussenegger/nvim-dap'
+
 	if packer_bootstrap then
 		require('packer').sync()
 	end
