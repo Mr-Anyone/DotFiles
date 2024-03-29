@@ -25,8 +25,17 @@ cmp.setup({
       { name = 'nvim_lsp' },
       { name = 'vsnip' }, -- For vsnip users.
       { name = 'nvim_lsp_signature_help' },
-
-    }, {
+      {
+        name = 'spell',
+        option = {
+            keep_all_entries = false,
+            enable_in_context = function()
+                return true
+            end,
+        },
+      }, {
       { name = 'buffer' },
-    })
+    },})
 })
+
+
