@@ -8,12 +8,12 @@ vim.opt.shiftwidth=4
 vim.opt.softtabstop=4
 vim.opt.expandtab=true
 
--- have space to show serach bar
+-- have space to show search bar
 vim.opt.scrolloff = 8
--- disble auto formating
+-- disable auto formatting
 vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 
 
 -- setting for spellings
 vim.opt.spelllang = 'en_us'
-vim.opt.spell = true
+--vim.opt.spell = true
