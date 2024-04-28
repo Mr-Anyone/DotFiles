@@ -179,3 +179,9 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# setup the monitor and stuff like that
+workspace 2 output DP-0.8
+workspace 1 output HDMI-0
+
+exec_always autorandr --change
