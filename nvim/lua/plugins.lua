@@ -45,8 +45,15 @@ return require('packer').startup(function(use)
     -- nvim-dap debugger 
     use 'mfussenegger/nvim-dap'
 
-    -- quick navigation
-    use 'ThePrimeagen/harpoon'
+    -- better navigations
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
+
+    -- status bar
+    use {"vim-airline/vim-airline"}
 
 	if packer_bootstrap then
 		require('packer').sync()

@@ -13,3 +13,7 @@ vim.opt.scrolloff = 8
 -- disble auto formating
 vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 
+
+-- setting for spellings
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
