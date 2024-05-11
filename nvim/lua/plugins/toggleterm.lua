@@ -4,8 +4,6 @@ require("toggleterm").setup{
 	direction="horizontal"
 }
 
-
-
 function _G.set_terminal_keymaps()
   local opts = {noremap = true}
   vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
@@ -15,7 +13,10 @@ function _G.set_terminal_keymaps()
   vim.api.nvim_buf_set_keymap(0, 't', '<c-w><C-j>', [[<C-\><C-n><C-W>j]], opts)
   vim.api.nvim_buf_set_keymap(0, 't', '<c-w><C-k>', [[<C-\><C-n><C-W>k]], opts)
   vim.api.nvim_buf_set_keymap(0, 't', '<c-w><C-l>', [[<C-\><C-n><C-W>l]], opts)
-  vim.api.nvim_buf_set_keymap(0, 't', '<f4>', '<cmd>10TermExec cmd=./run.sh<cr>', opts)
+
+
+  local local_dir = vim.loop.cwd()
+  vim.api.nvim_buf_set_keymap(0, 't', '<f4>', '<cmd>10TermExec cmd="cd '..local_dir..' && ./run.sh"<cr>', opts)
 end
 
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
