@@ -12,7 +12,7 @@ lspconfig.ccls.setup {
     capabilities=capabilities,
     cmd = {
         "ccls", 
-        '--init={"index": {"threads": 2}, "cache": {"directory" : ".cache"}}'
+        '--init={"index": {"threads": 2, "initialBlacklist": ["."]}, "cache": {"directory" : ".cache"}}'
     }
 }
 
