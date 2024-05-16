@@ -9,7 +9,11 @@ local root_files = {
 -- language servers setup
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 lspconfig.ccls.setup {
-    capabilities=capabilities
+    capabilities=capabilities,
+    cmd = {
+        "ccls", 
+        '--init={"index": {"threads": 2}, "cache": {"directory" : ".cache"}}'
+    }
 }
 
 lspconfig.pyright.setup{
