@@ -22,3 +22,8 @@ map('n', "'", '`')
 --adding toggle term execute commands
 local local_dir = vim.loop.cwd()
 map('n', "<f4>", '<cmd>10TermExec cmd="cd '..local_dir..' && ./run.sh"<cr>') 
+
+--adding support for quickfix list
+map('n', "<leader>qq", '<cmd>cclose<cr>')  -- close
+map('n', "<leader>qk", '<cmd>cnext<cr>')  -- up
+map('n', "<leader>qj", '<cmd>cprev<cr>')  -- down
