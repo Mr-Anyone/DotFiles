@@ -12,14 +12,6 @@ lspconfig.clangd.setup{
     capabilities=capabilities,
 }
 
--- lspconfig.ccls.setup {
---     capabilities=capabilities,
---     cmd = {
---         "ccls", 
---         '--init={"index": {"threads": 2, "initialBlacklist": ["."]}, "cache": {"directory" : ".cache"}}'
---     }
--- }
-
 lspconfig.pyright.setup{
     capabilities=capabilities,
     root_dir = function(fname)
@@ -29,6 +21,18 @@ lspconfig.pyright.setup{
     settings = {
         analysis = {diagnosticMode = "off", typeCheckingMode = "off" }
     }
+}
+
+lspconfig.rust_analyzer.setup{
+  settings = {
+    ['rust-analyzer'] = {
+      diagnostics = {
+        enable = false;
+      }
+    }
+  },
+
+  cmd={'/home/vhe/.local/bin/rust-analyzer'}
 }
 
 lspconfig.cmake.setup{}
@@ -44,6 +48,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     vim.keymap.set('n', '<leader>gn', vim.lsp.buf.rename, opts)
     vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, opts)
+    vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, opts)
     vim.keymap.set('n', '<leader>gh', function()
       vim.lsp.buf.format { async = true }
     end, opts)

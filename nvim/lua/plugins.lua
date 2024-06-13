@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'windwp/nvim-autopairs'
+    use 'psf/black' -- python auto complete
      
     -- friendly-snippets
     use 'hrsh7th/vim-vsnip'
