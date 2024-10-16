@@ -6,10 +6,13 @@ local root_files = {
 }
 
 
+vim.lsp.set_log_level("debug")
+
 -- language servers setup
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
 lspconfig.clangd.setup{
-    capabilities=capabilities,
+    filetypes = { "c", "cpp" }, -- Include only the desired file types
+    root_dir = lspconfig.util.root_pattern("compile_commands.json"), -- Check for compile_commands.json or .git directory
+    capabilities = capabilities,
 }
 
 lspconfig.pyright.setup{
@@ -55,8 +58,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
---setup auto formatting 
---see here for more https://www.mitchellhanberg.com/modern-format-on-save-in-neovim/
+-- setup auto formatting 
+-- see here for more https://www.mitchellhanberg.com/modern-format-on-save-in-neovim/
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("lsp", { clear = true }),
   callback = function(args)
