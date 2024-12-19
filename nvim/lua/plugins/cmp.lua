@@ -25,6 +25,7 @@ cmp.setup({
       { name = 'nvim_lsp' },
       { name = 'vsnip' }, -- For vsnip users.
       { name = 'nvim_lsp_signature_help' },
+      { name = 'path' },
       {
         name = 'spell',
         option = {
@@ -34,7 +35,8 @@ cmp.setup({
             end,
         },
       }, {
-      { name = 'buffer' },
+      { name = 'buffer' 
+      },
     },})
 })
 
