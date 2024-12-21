@@ -25,8 +25,7 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
 	}
 	-- install theme
-	-- use 'morhetz/gruvbox'
-    use 'folke/tokyonight.nvim'
+    use 'morhetz/gruvbox'
 	-- lsp (language server)
     use 'neovim/nvim-lspconfig' --lsp
 
