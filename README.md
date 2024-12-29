@@ -1,5 +1,7 @@
 ## How to setup 
 
+Install `polybar` and `nitrogen`
+
 run the `setup.sh` and it should work? 
 
 ## Neovim setup

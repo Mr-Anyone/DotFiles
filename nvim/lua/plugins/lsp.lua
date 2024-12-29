@@ -22,7 +22,7 @@ lspconfig.pyright.setup{
     end,
 
     settings = {
-        analysis = {diagnosticMode = "off", typeCheckingMode = "off" }
+        analysis = {diagnosticMode = "on", typeCheckingMode = "off" }
     }
 }
 

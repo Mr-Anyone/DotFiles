@@ -180,9 +180,13 @@ bar {
         status_command i3status
 }
 
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # setup the monitor and stuff like that
 workspace 2 output DP-0.8
 workspace 1 output HDMI-0
 
 exec_always xsetroot -solid "#000000"
 exec_always xrandr --output DP-0.8 --rotate left
+exec_always nitrogen --restore
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
