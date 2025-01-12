@@ -190,4 +190,6 @@ workspace 1 output HDMI-0
 exec_always xsetroot -solid "#000000"
 exec_always xrandr --output DP-0.8 --rotate left
 exec_always nitrogen --restore
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# setup ibus chinses keyboard
+exec_always  ibus-daemon -rxRd
