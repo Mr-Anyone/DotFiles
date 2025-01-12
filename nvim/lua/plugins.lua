@@ -26,6 +26,8 @@ return require('packer').startup(function(use)
 	}
 	-- install theme
     use 'morhetz/gruvbox'
+    use 'folke/tokyonight.nvim'
+
 	-- lsp (language server)
     use 'neovim/nvim-lspconfig' --lsp
 
@@ -44,6 +46,8 @@ return require('packer').startup(function(use)
     use "rafamadriz/friendly-snippets"
 
     -- nvim-dap debugger 
+    -- I probably don't really need this!
+    -- way too complicated to setup
     use 'mfussenegger/nvim-dap'
 
     -- better navigations
@@ -54,7 +58,10 @@ return require('packer').startup(function(use)
     }
 
     -- status bar
-    use {"vim-airline/vim-airline"}
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 
 	if packer_bootstrap then
 		require('packer').sync()
