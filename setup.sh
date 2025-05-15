@@ -1,5 +1,6 @@
 rm -r ~/.config/i3
 rm -r ~/.config/nvim
+rm -r ~/.config/alacritty
 rm -r ~/.tmux.conf
 rm -r ~/.gitconfig
 
@@ -7,6 +8,7 @@ rm -r ~/.gitconfig
 sudo ln -s $(pwd)/nvim ~/.config/nvim
 sudo ln -s $(pwd)/i3 ~/.config/i3
 sudo ln -s $(pwd)/.tmux.conf ~/.tmux.conf
+sudo ln -s $(pwd)/alacritty ~/.config/alacritty
 sudo ln -s $(pwd)/.gitconfig ~/.gitconfig
 
 git config --global core.pager delta
