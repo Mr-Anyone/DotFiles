@@ -1,3 +1,4 @@
+# remove directory
 rm -r ~/.config/i3
 rm -r ~/.config/nvim
 rm -r ~/.config/alacritty
