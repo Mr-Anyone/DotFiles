@@ -1,3 +1,4 @@
+
 echo "Removing Directories"
 # remove directory
 rm -r ~/.config/i3
