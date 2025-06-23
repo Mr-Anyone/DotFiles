@@ -13,5 +13,3 @@ run the `setup.sh` and it should work?
 ## i3 Setup
 
 To horizontally split screen press mod + u
-
-

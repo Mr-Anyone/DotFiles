@@ -52,7 +52,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>gn', vim.lsp.buf.rename, opts)
     vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, opts)
     vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, opts)
-    vim.keymap.set('n', '<leader>gh', function()
+    vim.keymap.set('n', '<leader>gf', function()
       vim.lsp.buf.format { async = true }
     end, opts)
   end,
