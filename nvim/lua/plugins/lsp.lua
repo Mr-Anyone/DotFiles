@@ -5,8 +5,8 @@ local root_files = {
   'pyrightconfig.json',
 }
 
-
-vim.lsp.set_log_level("debug")
+-- useful when debugging lsp
+-- vim.lsp.set_log_level("debug")
 
 -- language servers setup
 lspconfig.clangd.setup{
