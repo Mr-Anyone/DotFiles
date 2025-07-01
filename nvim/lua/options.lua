@@ -15,8 +15,8 @@ vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 
 
 -- setting for spellings
-vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
+vim.opt.spelllang = {"en_us"}
 
 -- disable annooying swap files
 vim.opt.swapfile = false

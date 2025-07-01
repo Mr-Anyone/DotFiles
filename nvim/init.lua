@@ -1,4 +1,3 @@
--- some comments here 
 require('options')
 require('mapping')
 require('plugins')
@@ -10,6 +9,6 @@ require('plugins/lsp')
 require('plugins/telescope')
 require('plugins/nerdtree')
 require('plugins/vsnip')
-require('plugins/auto_pairs')
+require('plugins/autopair')
 require('plugins/harpoon')
 require('plugins/lualine')

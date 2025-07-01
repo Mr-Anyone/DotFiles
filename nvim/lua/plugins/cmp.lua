@@ -27,17 +27,24 @@ cmp.setup({
       { name = 'nvim_lsp_signature_help' },
       { name = 'path' },
       {
-        name = 'spell',
-        option = {
-            keep_all_entries = false,
-            enable_in_context = function()
-                return true
-            end,
-        },
-      }, {
-      { name = 'buffer' 
+          name = "spell",
+          option = {
+              keep_all_entries = false,
+              enable_in_context = function()
+                  return true
+              end,
+              preselect_correct_word = true,
+          },
       },
-    },})
+      {
+          name = 'buffer',
+          option = {
+              get_bufnrs = function()
+                  return vim.api.nvim_list_bufs()
+              end
+          }
+      }
+      })
 })
 
 
