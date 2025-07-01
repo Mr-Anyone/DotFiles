@@ -58,6 +58,23 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+
+-- setting the default value
+local should_enable_clangd = true
+local function switch_lsp()
+    should_enable_clangd = not should_enable_clangd
+    vim.lsp.enable('clangd', should_enable_clangd)
+end
+
+vim.api.nvim_create_user_command("SwitchLSP", switch_lsp, {})
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(args)
+      if not should_enable_clangd then 
+          vim.lsp.enable("clangd", false)
+      end
+  end,
+})
+
 -- setup auto formatting 
 -- see here for more https://www.mitchellhanberg.com/modern-format-on-save-in-neovim/
 -- vim.api.nvim_create_autocmd("LspAttach", {

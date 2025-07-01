@@ -12,3 +12,5 @@
 	name = Vincent
 	email = llvm@viceroygroup.ca
 
+[diff]
+	tool = meld
