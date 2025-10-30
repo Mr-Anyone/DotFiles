@@ -9,36 +9,44 @@ local root_files = {
 -- vim.lsp.set_log_level("debug")
 
 -- language servers setup
-lspconfig.clangd.setup{
-    filetypes = { "c", "cpp" }, -- Include only the desired file types
-    root_dir = lspconfig.util.root_pattern("compile_commands.json"), -- Check for compile_commands.json or .git directory
-    capabilities = capabilities,
-}
+-- vim.lsp.config["clangd"] = {
+--         filetypes = { "c", "cpp" }, -- Include only the desired file types
+--         root_dir = lspconfig.util.root_pattern("compile_commands.json"), -- Check for compile_commands.json or .git directory
+--         -- capabilities = capabilities,
+--     }
+-- )
 
-lspconfig.pyright.setup{
-    capabilities=capabilities,
-    root_dir = function(fname)
-      return util.root_pattern(unpack(root_files))(fname)
-    end,
+-- vim.lsp.config(
+--     "pyright",{
+--         capabilities=capabilities,
+--         root_dir = function(fname)
+--           return util.root_pattern(unpack(root_files))(fname)
+--         end,
+--         settings = {
+--             analysis = {diagnosticMode = "on", typeCheckingMode = "off" }
+--         }
+--     }
+-- )
 
-    settings = {
-        analysis = {diagnosticMode = "on", typeCheckingMode = "off" }
-    }
-}
+-- vim.lsp.config("rust_analyzer", {
+--         settings = {
+--             ['rust-analyzer'] = {
+--                 diagnostics = {
+--                     enable = false;
+--                 }
+--             }
+--         },
+-- 
+--         cmd={'/home/vhe/.local/bin/rust-analyzer'}
+--     }
+-- )
 
-lspconfig.rust_analyzer.setup{
-  settings = {
-    ['rust-analyzer'] = {
-      diagnostics = {
-        enable = false;
-      }
-    }
-  },
+-- vim.lsp.config("cmake", {})
 
-  cmd={'/home/vhe/.local/bin/rust-analyzer'}
-}
-
-lspconfig.cmake.setup{}
+vim.lsp.enable('clangd')
+vim.lsp.enable('cmake')
+vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('pyright')
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
@@ -65,6 +73,7 @@ local function switch_lsp()
     should_enable_clangd = not should_enable_clangd
     vim.lsp.enable('clangd', should_enable_clangd)
 end
+
 
 vim.api.nvim_create_user_command("SwitchLSP", switch_lsp, {})
 vim.api.nvim_create_autocmd('LspAttach', {
