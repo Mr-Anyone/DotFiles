@@ -3,6 +3,11 @@ vim.opt.relativenumber=true
 vim.opt.autoindent=true 
 -- better tab
 
+vim.opt.smarttab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
 -- TODO: remove me in the future
 -- Define a custom command to toggle OS161 formatting
 vim.api.nvim_create_user_command("OS161Format", function()
