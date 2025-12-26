@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
 	use 'preservim/nerdtree'
 	use {"akinsho/toggleterm.nvim", tag = '*'}
 	-- install teloscope
-	use {'nvim-telescope/telescope.nvim', branch='0.1.x', requires={{'nvim-lua/plenary.nvim'}}}  
+	use {'nvim-telescope/telescope.nvim', tag='v0.2.0', requires={{'nvim-lua/plenary.nvim'}}}  
 
 	use {
         'nvim-treesitter/nvim-treesitter',
