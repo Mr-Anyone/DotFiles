@@ -29,3 +29,8 @@ map('n', "<leader>qo", '<cmd>copen<cr>')  -- close
 map('n', "<leader>qk", '<cmd>cnext<cr>')  -- up
 map('n', "<leader>qj", '<cmd>cprev<cr>')  -- down
 map('n', "<leader>qj", '<cmd>cprev<cr>')  -- down
+
+-- Quick way to fold things in neovim
+vim.api.nvim_create_user_command('FoldBracket', function()
+  vim.cmd('normal! v%zf')
+end, {})
