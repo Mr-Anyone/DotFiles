@@ -16,8 +16,3 @@ sudo ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 sudo ln -s $(pwd)/alacritty ~/.config/alacritty
 sudo ln -s $(pwd)/.gitconfig ~/.gitconfig
 sudo ln -s $(pwd)/.lldbinit ~/.lldbinit
-
-echo "Setting up git"
-git config --global core.pager delta
-git config --global interactive.diffFilter 'delta --color-only'
-git config --global delta.navigate true
