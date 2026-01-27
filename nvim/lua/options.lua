@@ -4,9 +4,9 @@ vim.opt.autoindent=true
 -- better tab
 
 vim.opt.smarttab = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 4
+vim.opt.tabstop = 2 
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 -- have space to show search bar
 vim.opt.scrolloff = 8
@@ -20,3 +20,7 @@ vim.opt.spelllang = {"en_us"}
 
 -- disable annooying swap files
 vim.opt.swapfile = false
+
+-- setup fold method
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
