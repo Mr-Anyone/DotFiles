@@ -1,0 +1,15 @@
+#!/bin/bash
+path_to_rocmlir_opt=/home/vhe/rocMLIR/build-release/bin/rocmlir-opt
+path_to_mlir=$1
+output_filename=$2
+
+if [[ -z $path_to_iree_compile ]] ; then
+  echo "to-linalg <migx.mlir> <linalg.mlir>"
+  exit 255
+fi
+
+$path_to_rocmlir_opt $path_to_mlir  --migraphx-to-linalg --cse --canonicalize --cse &> linalg.mlir
+exit_code=$?
+if [[ $exit_code == 0 ]] ; then
+  echo "failed to use rocmlir-opt"
+fi
