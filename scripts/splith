@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ -z "$VIEW" ]]; then
+    tmux split-window -v
+else
+    tmux split-window -v \
+        -c "#{pane_current_path}" \
+        "cleartool setview \"$VIEW\""
+fi

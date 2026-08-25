@@ -4,3 +4,7 @@
 
 [diff]
 	tool = meld
+[safe]
+	directory = /prj/qct/coredev/audio/scripts/PRD_scripts
+[core]
+	editor = nvim

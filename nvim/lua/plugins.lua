@@ -18,19 +18,19 @@ return require('packer').startup(function(use)
 	use 'preservim/nerdtree'
 	use {"akinsho/toggleterm.nvim", tag = '*'}
 	-- install teloscope
-	use {'nvim-telescope/telescope.nvim', tag='v0.2.0', requires={{'nvim-lua/plenary.nvim'}}}  
+	-- use {'nvim-telescope/telescope.nvim', tag='v0.2.0', requires={{'nvim-lua/plenary.nvim'}}}  
 
-	use {
-        'nvim-treesitter/nvim-treesitter',
-        lazy = false,
-        run = ':TSUpdate'
-	}
+	-- use {
+    --     'nvim-treesitter/nvim-treesitter',
+    --     lazy = false,
+    --     run = ':TSUpdate'
+	-- }
 	-- install theme
     use 'morhetz/gruvbox'
     use 'folke/tokyonight.nvim'
 
 	-- lsp (language server)
-    use 'neovim/nvim-lspconfig' --lsp
+    -- use 'neovim/nvim-lspconfig' --lsp
 
     -- auto complete
     use 'hrsh7th/nvim-cmp'
@@ -38,7 +38,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'windwp/nvim-autopairs'
-    use 'psf/black' -- python auto complete
+    -- use 'psf/black' -- python auto complete
      
     -- friendly-snippets
     use 'hrsh7th/vim-vsnip'
@@ -49,14 +49,14 @@ return require('packer').startup(function(use)
     -- nvim-dap debugger 
     -- I probably don't really need this!
     -- way too complicated to setup
-    use 'mfussenegger/nvim-dap'
+    -- use 'mfussenegger/nvim-dap'
 
     -- better navigations
-    use {
-        "ThePrimeagen/harpoon",
-        branch = "harpoon2",
-        requires = { {"nvim-lua/plenary.nvim"} }
-    }
+    -- use {
+    --     "ThePrimeagen/harpoon",
+    --     branch = "harpoon2",
+    --     requires = { {"nvim-lua/plenary.nvim"} }
+    -- }
 
     -- status bar
     use {

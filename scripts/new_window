@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ -z "$VIEW" ]]; then
+    tmux new-window
+else
+    tmux new-window \
+        -c "#{pane_current_path}" \
+        "cleartool setview \"$VIEW\""
+fi
