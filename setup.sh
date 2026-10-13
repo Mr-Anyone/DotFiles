@@ -3,6 +3,7 @@ echo "Removing Directories"
 # remove directory
 rm -r ~/.config/i3
 rm -r ~/.config/nvim
+rm -f ~/.vimrc
 rm -r ~/.config/alacritty
 rm -r ~/.tmux.conf
 rm -r ~/.lldbinit
@@ -11,6 +12,8 @@ rm -r ~/.gitconfig
 echo "Creating Symbolic Link"
 # copy the neovim config file
 ln -s $(pwd)/nvim ~/.config/nvim
+# copy the vim config file
+ln -s $(pwd)/vim/vimrc ~/.vimrc
 ln -s $(pwd)/i3 ~/.config/i3
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/alacritty ~/.config/alacritty

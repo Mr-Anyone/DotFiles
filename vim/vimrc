@@ -1,0 +1,68 @@
+" Basic editor behavior
+set number
+set relativenumber
+set autoindent
+set smarttab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set scrolloff=8
+set hidden
+set mouse=a
+
+" Keep the useful parts of Vim's default formatting behavior disabled,
+" matching the Neovim autocmd in this repository.
+augroup my_formatting
+  autocmd!
+  autocmd FileType * setlocal formatoptions-=r formatoptions-=o
+augroup END
+
+" Spelling
+" set spell
+" set spelllang=en_us
+
+" Do not create swap files.
+set noswapfile
+
+" Vim does not have Neovim's Tree-sitter fold expression built in. Indent
+" folding is a lightweight, plugin-free approximation.
+set foldmethod=indent
+set foldlevel=99
+
+" A few small built-in conveniences.
+filetype plugin indent on
+syntax enable
+set incsearch
+set hlsearch
+set wildmenu
+
+" Use the '-' key as the leader, as in Neovim.
+let mapleader = '-'
+
+" Insert-mode shortcuts from nvim/lua/mapping.lua
+inoremap <C-e> <Esc>ea
+inoremap <C-b> <Esc>bi
+inoremap <C-o> <Esc>o
+
+" Terminal-mode escape. This applies to Vim 8+ terminal buffers.
+tnoremap <Esc> <C-\><C-n>
+
+" Move between buffers.
+nnoremap <silent> <leader>bb :bprevious<CR>
+nnoremap <silent> <leader>bf :bnext<CR>
+
+" Start a whole-file substitution command, leaving the search field ready.
+nnoremap <C-r> :%s/
+
+" Make the apostrophe mapping behave like the backtick mapping.
+nnoremap ' `
+
+" Print the absolute path of the current file.
+command! Path echo expand('%:p')
+
+" Quickfix list shortcuts.
+nnoremap <silent> <leader>qq :cclose<CR>
+nnoremap <silent> <leader>qo :copen<CR>
+nnoremap <silent> <leader>qk :cnext<CR>
+nnoremap <silent> <leader>qj :cprev<CR>
