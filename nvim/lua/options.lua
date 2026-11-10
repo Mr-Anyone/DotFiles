@@ -25,6 +25,3 @@ vim.opt.swapfile = false
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- tags for Qualcomm
-vim.opt.tags:append(vim.fn.expand(
-  "/prj/qct/coredev/audio/$LPASS_CLUSTER/scratch02/lpass_ctags/$LPASS_PROJECT/tags"
-))
