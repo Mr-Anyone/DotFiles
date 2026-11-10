@@ -20,11 +20,11 @@ return require('packer').startup(function(use)
 	-- install teloscope
 	use {'nvim-telescope/telescope.nvim', tag='v0.2.0', requires={{'nvim-lua/plenary.nvim'}}}  
 
-	-- use {
-    --     'nvim-treesitter/nvim-treesitter',
-    --     lazy = false,
-    --     run = ':TSUpdate'
-	-- }
+	use {
+        'nvim-treesitter/nvim-treesitter',
+        lazy = false,
+        run = ':TSUpdate'
+	}
 	-- install theme
     use 'morhetz/gruvbox'
     use 'folke/tokyonight.nvim'

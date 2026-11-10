@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "path: $path"
 if [[ -z "$VIEW" ]]; then
     tmux split-window -v
 else
